@@ -1,0 +1,6 @@
+book_filename: "APL-guide"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Session "
+output_dir: "docs"
