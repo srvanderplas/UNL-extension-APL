@@ -5,11 +5,11 @@ on:
 
 
 
-name: renderbook
+name: update-book
 
 jobs:
   bookdown:
-    name: Render-Book
+    name: Compile-Book
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v1
