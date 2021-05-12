@@ -32,6 +32,7 @@ QUIZ # 3: The following day, students will individually complete an open book fo
 Next, students will be given the Abstract and Discussion section to read for homework. During the next class period, the teacher will share some of the student abstracts and ideas for future experimentation from Quiz 3, and compare these to the APL.  
 
 Regarding the APL’s abstract: highlight the concise nature and the tight logical flow, which like the introduction section, summarizes the big picture problem to specific research findings that were determined in the APL. 
+
 ::: emphasize
 After pointing out these features, notify students that they will be given an opportunity to improve their scores on Quiz 3 by revising their abstract for homework (this exercise disallows simply coping the APL abstract, see revised-quiz for more details). 
 :::
