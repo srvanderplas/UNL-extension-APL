@@ -1,0 +1,39 @@
+# Apply the C-REATE method: Read, Elucidate the hypothesis, Analyze the results and Think of the next Experiment {#create-method}
+
+Students are assigned with reading the Materials and Methods AND Results section of the paper. Like the Introduction section, all other sections should be “blacked-out.  This completes the **“Read”** phase of the C**R**EATE method.  
+
+Without discussing the reading as a class, students will break into their groups to begin to analyze what they read.  Students will be tasked with applying the same cartooning and data analysis approach that they completed previously to systematically describe and analyze the experimental methods and data. For more details, see Handout # X. After completing this activity, **each group should organize and submit this work as a portfolio, which should include a title page and table of contents.** This concludes the **E**lucidate the hypothesis and **A**nalyze portion of the CR**EA**TE method. 
+
+::: activity
+PRESENTATION # 2: Next, randomly assign each group to lead a discussion for one of the data panels from the Results section of the APL.  All non-presenting groups, as well as the teacher will participate in assessing each presentation (see presentation assessment rubric, Elucidate hypothesis & Analyze, CR-EA-TE method).
+:::
+
+Additional leading questions that could be used to facilitate group discussions, include:
+1. **How did your cartoon or figure annotation affect your sense of understanding the results?**    
+This type of rudimentary diagraming and labeling is also done by (expert) researchers to help plan, execute and interpret results—the bottom line is that there is often lots of information to juggle for any of these tasks, and choosing to “break down” things by using cartoon diagrams or annotating actual results is a great way to organize and understand experimental design approaches and interpret their results
+
+2. **Was the experiment properly designed? Explain. Specify any missing or alternative controls.**    
+Explain “For various reasons, sometimes certain controls are not included in the approach. (Have students think about why this may be) these may include existing orthogonal data from other experiments or time-sensitive deadlines for publishing the data. Reiterate that a perfectly controlled experiment does not exist, and there is always a cost-benefit analysis that needs to be considered for determining what a proper (mixture of practicality and analytical perfection) designed experiment looks like.
+
+3. **How does the experimental question or hypothesis relate to the bigger objective of the research study? Were the results expected?**    
+Explain that while negative results are not published nearly enough (a current issue in science), often times published data contains information that is not easily explainable. In these cases, scientists do their best to utilize evidence-based reasoning to offer possible and reasonable explanations. This is in sharp contrast with how science is often depicted in a textbook, that often alludes to a static and discrete way of thinking—that scientific conclusions are certain and summarized by an answer key in the appendix of a textbook)
+
+4. **Were the results statistically significant and do they represent a meaningful result? If so, can one deduce a causal link with any treatment effect? Explain.**     
+Unless the APL requires more complex statistical analysis (this should be clarified in the APL-teacher version received at the CREATE-an-APL workshop), the main thing students should focus on in answering this question, is looking at the p value associated with a simple t-test or post-hoc group comparison test used after application of an ANOVA test.  It may be good to remind students of the pertinent terms and concepts that they learned during Lesson four (point students to the concept maps they created to organize this information for a refresher). 
+Reiterate that with carefully controlled, randomized studies, that (quantifiable) treatment effects can be reasonably considered causative (versus observational or survey studies that are typically correlational-based studies). 
+
+5. **Explain the rationale for the method chosen? What are the advantages or disadvantages associated with it?What alternative methods could have been used?**    
+(This may be a difficult question to answer for any non-expert; however, if enough background information was provided about alternative methods during the methods-based lightening-talk, this may be a relevant question)
+
+::: quiz
+QUIZ # 3: The following day, students will individually complete an open book follow-up quiz that includes 1) writing an Abstract to summarize the APL and 2) describe a follow-up experiment that addresses a research question that builds on the results of the APL! This marks the **T**hink of the next **E**xperiment of the CREA**TE** method (see quiz for more details) (90 minutes)
+:::
+
+Next, students will be given the Abstract and Discussion section to read for homework. During the next class period, the teacher will share some of the student abstracts and ideas for future experimentation from Quiz 3, and compare these to the APL.  
+
+Regarding the APL’s abstract: highlight the concise nature and the tight logical flow, which like the introduction section, summarizes the big picture problem to specific research findings that were determined in the APL. 
+::: emphasize
+After pointing out these features, notify students that they will be given an opportunity to improve their scores on Quiz 3 by revising their abstract for homework (this exercise disallows simply coping the APL abstract, see revised-quiz for more details). 
+:::
+
+Regarding the APL’s discussion section: Some student ideas likely will be similar to what the authors proposed, and others will likely be different. This exercise is meant to highlight the range of potentially many different experimental approaches that one could pursue, and that it is the scientist’s job to carefully vet the pros and cons associated with each, before ultimately deciding which, **if any** path should be pursued.   Suggested follow-up discussion script, “how does the scientist decide which approach to take”?! 

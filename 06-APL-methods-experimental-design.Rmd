@@ -1,0 +1,13 @@
+# APL specific methodology and experimental design {#apl-methods-design}
+
+Next, assign each group with the task of utilizing one of the methods they previously mastered during lesson 4, to design an experiment aimed at answering a specific question or hypothesis that is the same or similar to a research question that was identified in the Introduction section. Briefly, according to their experimental approach, students will draw and annotate a cartoon-diagram that maps out the steps that they would hypothetically take to execute the experiment. They will also include an annotated data figure that outlines hypothetical results for this experiment (see group activity # for more details).
+
+::: emphasize
+Explain to students that “cartooning” and outlining hypothetical results represent a common approach that many scientists take to plan and anticipate their own experimental results.  Also, explain to students, that this sort of predictive planning can also be employed as a “metacognitive” reading strategy for anticipating results of unread sections of primary literature. This type of forethought has been shown to improve self-regulation during reading and improves the learner’s ability to critically analyze scientific data (citation). This exercise also enables students to practice applying the same methods that will be used to complete the remaining CREATE activities (i.e., cartoon drawing and annotating results). Once finished, each group should link their work to Concept Maps on Cmap (estimated time, 90 minutes).
+:::
+
+Next, each group should share their experimental ideas and hypothetical predicted results with the class (5-10 minutes per group), followed by 5-10 minute session of peer-feedback, during which the rest of the class asks questions and evaluates each group’s experiments. 
+
+::: emphasize
+Explain to students that this format is similar to how many scientists run laboratory meetings: A round-table discussion centered on analyzing actual experimental data and or proposed new experimental directions that are critiqued by lab members.  
+:::

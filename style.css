@@ -12,3 +12,46 @@ pre {
 pre code {
   white-space: inherit;
 }
+
+
+.activity, .box, .define, .emphasize, .note, .quiz {
+  background-origin:padding-box;
+  background-repeat: no-repeat;
+  background-size:10% auto;
+  padding:5px 5px 5px 11%;
+  min-width:99%;
+  min-height:4em;
+  /*margin: 20px 20px;*/
+  box-shadow: 10px white;
+}
+
+.emphasize {
+  background-image:url(image/comment-alt-regular.svg);
+  /*background-color: #EF476F22;*/
+  box-shadow: 0 0 0 1px #EF476F,
+              0 0 0 10px white;
+}
+
+.note {
+  background-image:url(image/sticky-note-regular.svg);
+  box-shadow: 0 0 0 1px #FFD166,
+              0 0 0 10px white;
+}
+
+.activity {
+  background-image:url(image/flask-solid.svg);
+  box-shadow: 0 0 0 1px #06D6A0,
+              0 0 0 10px white;
+}
+
+.define {
+  background-image:url(image/book-open-solid.svg);
+  box-shadow: 0 0 0 1px #118AB2,
+              0 0 0 10px white;
+}
+
+.quiz {
+  background-image:url(image/ruler-solid.svg);
+  box-shadow: 0 0 0 1px #073B4C,
+              0 0 0 10px white;
+}
