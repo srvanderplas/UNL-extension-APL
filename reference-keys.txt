@@ -1,7 +1,8 @@
 intro-concept-mapping
-literature
-methods
-applications
-example-one
-example-two
-final-words
+genres-sci-text
+experimental-design-and-statistical-analysis
+apl-specific-methodology
+adapted-primary-literature-apl-concept-mapping-complete-the-consider-phase-of-the-create-method
+apl-methods-design
+create-method
+science-as-a-career-from-business-to-academia
