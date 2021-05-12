@@ -2,5 +2,5 @@ book_filename: "APL-guide"
 delete_merged_file: true
 language:
   ui:
-    chapter_name: "Session "
+    chapter_name: "Lesson "
 output_dir: "_site"

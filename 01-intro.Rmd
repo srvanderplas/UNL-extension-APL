@@ -1,24 +1,19 @@
-# Introduction {#intro}
+# Introduction to Concept Mapping {#intro-concept-mapping}
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+Note: Modeled after supplementary materials teaching guide, Hoskins et al, 2020: https://doi.org/10.1128/jmbe.v21i1.1905
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+Time: 50-90 minutes
 
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
-```
+**Working definition for a concept map**: A concept map is a hierarchical-based web of inter-related concepts, which are represented by words and linked to other concepts by short descriptive phrases.
 
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+Introduce concept mapping to students. Do not spend too much time on the technicalities of concept mapping, but it is important to highlight key aspects of the process. During this time, it is important to communicate to students that the ultimate goal of utilizing a tool like a concept map is to enable students to apply and transfer the underlying knowledge-making principles of concept mapping to augment their ability to critically process both old and new information—long beyond the focus of this unit. 
 
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
+Pick an easy/familiar topic and begin demonstrating making a concept map using Cmap-Cloud, an electronic, cloud-based concept-mapping tool that allows creation and synchronous editing of concept maps my multiple people at once, making it a good tool for in-class or outside-class group-work. It is recommended to utilize the framework outlined from http://www1.udel.edu/chem/white/teaching/ConceptMap.html to i) organize, ii) layout, iii) link, and iv) finalize the concept map.  The main-focus here is to communicate the basic structure that defines a good concept map (i.e., usually, this includes a well-defined hierarchy of concepts that contain a rich connection of links between them).  
 
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+Next, have students break-up into small groups.  Using Cmap-Cloud, each group will make a concept map that describes three different professional careers, one of which is a scientist.  Students should include themselves as a fourth concept that is embedded within the concept map. The goal of this exercise is to 
 
+i. provide a practice opportunity for students to become proficient in Cmap, including being able to collaborate with their peers to co- construct and annotate concept maps with other documents or links, and 
+ii. describe preconceived notions about science/scientists and how this relates to the student's own identities and professional aspirations. 
 
-this is a test...
+It is critical, that each student construct their own concept maps individually prior to convening, sharing and creating a group concept map (see handout #1, concept mapping: XXX).
+
