@@ -3,4 +3,4 @@ delete_merged_file: true
 language:
   ui:
     chapter_name: "Session "
-output_dir: "_book"
+output_dir: "_site"
