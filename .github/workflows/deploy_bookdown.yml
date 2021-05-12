@@ -1,7 +1,8 @@
 on:
   push:
      branches:
-       - master
+       - main
+
 
 
 name: renderbook
@@ -41,9 +42,10 @@ jobs:
          # Destination path
          path: _book # optional
      - name: Deploy to GitHub Pages
-       uses: Cecilapp/GitHub-Pages-deploy@v3
+       uses: Cecilapp/GitHub-Pages-deploy@master
        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-       with:
-          build_dir: _book/ # "_site/" by default
-          email: ${{ secrets.EMAIL }}  # must be a verified email
+          EMAIL: ${{ secrets.EMAIL }}               # must be a verified email
+          GH_TOKEN: ${{ secrets.GH_PAT }} # https://github.com/settings/tokens
+          BUILD_DIR: _book/                     # "_site/" by default
+
+
