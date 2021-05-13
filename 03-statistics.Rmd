@@ -76,6 +76,6 @@ The simulation method described above for evaluating the probability of observin
 
 No matter what distribution the researcher uses to compare to, the basic idea of theory-based statistics is the same: we look for **evidence that our result is (or is not) likely under the null hypothesis**. If the result is likely under the null, then we can't say anything -- we can't disprove the idea that the results are due to chance. If the result isn't likely under the null, then we reject the null hypothesis and say the alternative is more likely. 
 
-In theory-based tests, this evidence is usually in the form of **a __-value**, where the blank is the name of the distribution (commonly, $z$, $t$, $F$, $\chi^2$). 
+In theory-based tests, this evidence is usually in the form of **a \_\_-value**, where the blank is the name of the distribution (commonly, $z$, $t$, $F$, $\chi^2$). 
 
 ![The same process used in simulated distributions works in theory-based distributions.](image/Stat_test_logic.png)
