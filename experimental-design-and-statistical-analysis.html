@@ -76,7 +76,14 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="chapter" data-level="1" data-path="intro-concept-mapping.html"><a href="intro-concept-mapping.html"><i class="fa fa-check"></i><b>1</b> Introduction to Concept Mapping</a></li>
 <li class="chapter" data-level="2" data-path="genres-sci-text.html"><a href="genres-sci-text.html"><i class="fa fa-check"></i><b>2</b> Genres of Scientific Text</a></li>
-<li class="chapter" data-level="3" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html"><i class="fa fa-check"></i><b>3</b> Experimental Design and Statistical Analysis</a></li>
+<li class="chapter" data-level="3" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html"><i class="fa fa-check"></i><b>3</b> Experimental Design and Statistical Analysis</a><ul>
+<li class="chapter" data-level="3.1" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#the-logic-of-statistical-hypothesis-testing"><i class="fa fa-check"></i><b>3.1</b> The Logic of Statistical Hypothesis Testing</a><ul>
+<li class="chapter" data-level="" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#initial-statistical-setup"><i class="fa fa-check"></i>Initial statistical setup</a></li>
+<li class="chapter" data-level="" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#simulation"><i class="fa fa-check"></i>Simulation</a></li>
+<li class="chapter" data-level="3.1.1" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#evidence"><i class="fa fa-check"></i><b>3.1.1</b> Evidence</a></li>
+<li class="chapter" data-level="3.1.2" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#connection-to-theory-based-tests"><i class="fa fa-check"></i><b>3.1.2</b> Connection to Theory-based Tests</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="apl-specific-methodology.html"><a href="apl-specific-methodology.html"><i class="fa fa-check"></i><b>4</b> APL specific methodology</a></li>
 <li class="chapter" data-level="5" data-path="adapted-primary-literature-apl-concept-mapping-complete-the-consider-phase-of-the-create-method.html"><a href="adapted-primary-literature-apl-concept-mapping-complete-the-consider-phase-of-the-create-method.html"><i class="fa fa-check"></i><b>5</b> Adapted Primary Literature (APL) Concept-mapping: Complete the Consider phase of the CREATE method</a></li>
 <li class="chapter" data-level="6" data-path="apl-methods-design.html"><a href="apl-methods-design.html"><i class="fa fa-check"></i><b>6</b> APL specific methodology and experimental design</a></li>
@@ -108,7 +115,58 @@
 <p>Next, provide an overview focusing on a discussion of the basic principles underlying controlled versus observational studies, and how their underlying study design differences ultimately determine the nature of experimental conclusions that they can claim (i.e., causal versus association or correlational-based conclusions). This is a good time to connect back to the different types of scientific studies that were discussed by students during the scientific literature exercise the previous day. For example, a possible jab to stimulate discussion “why is it the case that in study A (a highly controlled study) versus study B (an observational study) that the scientists talk about causation, whereas in study B only correlational or association based claims are made—because both findings are statistically significant”? This is a lead-in to describing the nature of a controlled study, as well as how one thinks about experimental design in this context. It is recommended that you customize the problem based learning activity from handout X to cover important concepts and terminology related to these topics. This handout features PBL activities, that utilize a variety of case study examples from many different fields—field work, animal work, human work, bench work, environmental work, ect—to practice identifying different levels of controlled based experimental design, as well as the key aspects that define them. After the exercise, for homework, have students return to their master concept map, and add on an additional concept that covers experimental design components they identified and conceptualized in the activity.</p>
 <p>The next class period, go over the student concept maps briefly, ensuring that core concepts are included and linked. Next, begin an open-ended brainstorming session about the nature of data analysis and making experimental conclusions—this should be a segway that connects experimental design with statistical analysis. In other words, assuming there is a proper experimental design employed, how do scientists determine if they have an experimental treatment effect or whether their results are significant? Next, it is recommended that you use the active learning activities and materials provided by Dr. Vanderplas to overview a discussion about statistics (See web based material).</p>
 <p>Following completion of these modules, students are tasked with creating a concept map that summarizes key terms and concepts pertinent to the previous overview on statistics and the experimental methods that they just learned about. This should be done for homework over the next few days.</p>
+<div id="the-logic-of-statistical-hypothesis-testing" class="section level2">
+<h2><span class="header-section-number">3.1</span> The Logic of Statistical Hypothesis Testing</h2>
+<p>Sir Ronald Fisher once had a conversation with a woman who claimed to be able to tell whether the tea or milk was added first to a cup. Fisher, being interested in probability, decided to test this woman’s claim empirically by presenting her with 8 randomly ordered cups of tea - 4 with milk added first, and 4 with tea added first. The women was then supposed to select 4 cups prepared with one method, but is allowed to directly compare each cup (e.g. tasting each cup sequentially, or in pairs).</p>
+<p>The lady identified each cup correctly. Do we believe that this could happen by random chance alone?<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<div id="initial-statistical-setup" class="section level3 unnumbered">
+<h3>Initial statistical setup</h3>
+<ul>
+<li><p>Null Hypothesis (what we are hoping to disprove):<br />
+There is no observable difference between the two methods of preparing tea (any success is by chance alone).</p></li>
+<li><p>Alternative Hypothesis (if random chance isn’t the reason, then what?):<br />
+There is an observable difference between the two methods of preparing tea, that is, the woman can actually detect via taste which cups were prepared using either method.</p></li>
+</ul>
+<p>If the results we observed are due to random chance alone, how common would it be to get 8/8 correct?</p>
+</div>
+<div id="simulation" class="section level3 unnumbered">
+<h3>Simulation</h3>
+<ol style="list-style-type: decimal">
+<li><p>Flip a coin 4 times to represent the 4 cups identified as containing tea with milk added first. Heads corresponds to a correct decision, Tails to an incorrect decision.</p></li>
+<li><p>Record the number of successful selections</p></li>
+<li><p>Repeat 100 times to generate a distribution of results under the null hypothesis – that is, what our results would look like if the lady is just guessing.<br />
+Note: in a classroom setting, you can have each person generate several data points using actual coin flips to get this distribution.</p></li>
+</ol>
+<div class="figure"><span id="fig:unnamed-chunk-1"></span>
+<img src="APL-guide_files/figure-html/unnamed-chunk-1-1.png" alt="Simulated results (left), and simulated results evaluated in light of our observed data." width="49.5%" /><img src="APL-guide_files/figure-html/unnamed-chunk-1-2.png" alt="Simulated results (left), and simulated results evaluated in light of our observed data." width="49.5%" />
+<p class="caption">
+Figure 3.1: Simulated results (left), and simulated results evaluated in light of our observed data.
+</p>
+</div>
+</div>
+<div id="evidence" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Evidence</h3>
+<p>Our simulation shows that under random chance, it appears that our tea taster would be expected to identify all of the cups correctly (corresponding to HHHH) 4/100 = 0.04 times.</p>
+<div class="define">
+<p>0.04 in this example corresponds to our <strong>p-value</strong> - the probability under the null hypothesis of observing the results from our experiment.</p>
+</div>
+<p>0.04 is a fairly low value, so we might say that we don’t believe that the results are sufficiently likely under our null hypothesis. In this case, the probability of observing the results under the null hypothesis is low, so we might instead conclude that the alternative hypothesis seems more reasonable – that is, it is more likely that the null hypothesis is wrong.
+So, we might instead conclude that because our p-value is so low, that is, that we are unlikely to observe results this extreme under random chance, that instead we believe that the lady is not guessing and can actually detect the difference in tea prepared in different ways. We <strong>reject the null hypothesis and conclude that the alternative is more likely</strong>.</p>
+<p>Now, in this example, we have a relatively low sample size – which means that it is hard for us to find evidence too much stronger than what our simulation provided for us. In many situations in science, however, we may require <strong>stronger evidence</strong> that the null hypothesis is unlikely to generate results that we have observed – corresponding to requiring a p-value that is lower than 0.05. The correct threshold value (“alpha”) for rejecting a null hypothesis differs by discipline (physics may use values like <span class="math inline">\(10^{-6}\)</span>) and by the consequences of the results (medical trials may require small p-values, while studies looking for avenues to explore may use higher p-values.)</p>
+</div>
+<div id="connection-to-theory-based-tests" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Connection to Theory-based Tests</h3>
+<p>The simulation method described above for evaluating the probability of observing the evidence under the null hypothesis relies on significant manual simulation or outsourcing that work to a computer. The results are not guaranteed to be the same every time, and before computers were common, the manual simulation approach was often too tedious to use regularly. Thus, probability distributions describing the results mathematically were used instead.</p>
+<p>No matter what distribution the researcher uses to compare to, the basic idea of theory-based statistics is the same: we look for evidence that our result is (or is not) likely under the null hypothesis. If the result is likely under the null, then we can’t say anything – we can’t disprove the idea that the results are due to chance. If the result isn’t likely under the null, then we reject the null hypothesis and say the alternative is more likely.</p>
 
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>A more thorough explanation of this experiment is available <a href="https://en.wikipedia.org/wiki/Lady_tasting_tea">here</a> - the tea tasting experiment is one of the pillars of early statistics and randomization-based hypothesis testing.<a href="experimental-design-and-statistical-analysis.html#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
@@ -167,6 +225,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

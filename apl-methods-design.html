@@ -76,7 +76,14 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="chapter" data-level="1" data-path="intro-concept-mapping.html"><a href="intro-concept-mapping.html"><i class="fa fa-check"></i><b>1</b> Introduction to Concept Mapping</a></li>
 <li class="chapter" data-level="2" data-path="genres-sci-text.html"><a href="genres-sci-text.html"><i class="fa fa-check"></i><b>2</b> Genres of Scientific Text</a></li>
-<li class="chapter" data-level="3" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html"><i class="fa fa-check"></i><b>3</b> Experimental Design and Statistical Analysis</a></li>
+<li class="chapter" data-level="3" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html"><i class="fa fa-check"></i><b>3</b> Experimental Design and Statistical Analysis</a><ul>
+<li class="chapter" data-level="3.1" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#the-logic-of-statistical-hypothesis-testing"><i class="fa fa-check"></i><b>3.1</b> The Logic of Statistical Hypothesis Testing</a><ul>
+<li class="chapter" data-level="" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#initial-statistical-setup"><i class="fa fa-check"></i>Initial statistical setup</a></li>
+<li class="chapter" data-level="" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#simulation"><i class="fa fa-check"></i>Simulation</a></li>
+<li class="chapter" data-level="3.1.1" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#evidence"><i class="fa fa-check"></i><b>3.1.1</b> Evidence</a></li>
+<li class="chapter" data-level="3.1.2" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#connection-to-theory-based-tests"><i class="fa fa-check"></i><b>3.1.2</b> Connection to Theory-based Tests</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="apl-specific-methodology.html"><a href="apl-specific-methodology.html"><i class="fa fa-check"></i><b>4</b> APL specific methodology</a></li>
 <li class="chapter" data-level="5" data-path="adapted-primary-literature-apl-concept-mapping-complete-the-consider-phase-of-the-create-method.html"><a href="adapted-primary-literature-apl-concept-mapping-complete-the-consider-phase-of-the-create-method.html"><i class="fa fa-check"></i><b>5</b> Adapted Primary Literature (APL) Concept-mapping: Complete the Consider phase of the CREATE method</a></li>
 <li class="chapter" data-level="6" data-path="apl-methods-design.html"><a href="apl-methods-design.html"><i class="fa fa-check"></i><b>6</b> APL specific methodology and experimental design</a></li>
@@ -169,6 +176,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
