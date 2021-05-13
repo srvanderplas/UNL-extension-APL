@@ -9,3 +9,66 @@ Next, provide an overview focusing on a discussion of the basic principles under
 The next class period, go over the student concept maps briefly, ensuring that core concepts are included and linked.  Next, begin an open-ended brainstorming session about the nature of data analysis and making experimental conclusions—this should be a segway that connects experimental design with statistical analysis.  In other words, assuming there is a proper experimental design employed, how do scientists determine if they have an experimental treatment effect or whether their results are significant? Next, it is recommended that you use the active learning activities and materials provided by Dr. Vanderplas to overview a discussion about statistics (See web based material).  
 
 Following completion of these modules, students are tasked with creating a concept map that summarizes key terms and concepts pertinent to the previous overview on statistics and the experimental methods that they just learned about.  This should be done for homework over the next few days.
+
+
+
+## The Logic of Statistical Hypothesis Testing
+
+Sir Ronald Fisher once had a conversation with a woman who claimed to be able to tell whether the tea or milk was added first to a cup. Fisher, being interested in probability, decided to test this woman's claim empirically by presenting her with 8 randomly ordered cups of tea - 4 with milk added first, and 4 with tea added first. The women was then supposed to select 4 cups prepared with one method, but is allowed to directly compare each cup (e.g. tasting each cup sequentially, or in pairs). 
+
+The lady identified each cup correctly. Do we believe that this could happen by random chance alone?^[A more thorough explanation of this experiment is available [here](https://en.wikipedia.org/wiki/Lady_tasting_tea) - the tea tasting experiment is one of the pillars of early statistics and randomization-based hypothesis testing.]
+
+### Initial statistical setup {-}
+
+- Null Hypothesis (what we are hoping to disprove):    
+There is no observable difference between the two methods of preparing tea (any success is by chance alone). 
+
+- Alternative Hypothesis (if random chance isn't the reason, then what?):    
+There is an observable difference between the two methods of preparing tea, that is, the woman can actually detect via taste which cups were prepared using either method.
+
+
+If the results we observed are due to random chance alone, how common would it be to get 8/8 correct? 
+
+### Simulation {-}
+
+1. Flip a coin 4 times to represent the 4 cups identified as containing tea with milk added first. Heads corresponds to a correct decision, Tails to an incorrect decision.
+2. Record the number of successful selections
+
+3. Repeat 100 times to generate a distribution of results under the null hypothesis -- that is, what our results would look like if the lady is just guessing.    
+Note: in a classroom setting, you can have each person generate several data points using actual coin flips to get this distribution.
+
+```{r, echo = F}
+set.seed(24094703)
+library(ggplot2)
+library(tibble)
+res <- tibble(x = rbinom(100, 4, .5))
+res$fill <- factor(ifelse(res$x == 4, "As extreme", "Not as extreme"))
+
+ggplot(data = res, aes(x = x)) + geom_bar() + xlab("# Correct Cups Identified") + ylab("# Simulations") + ggtitle("Results of Tea Test Under Random Chance")
+
+ggplot(data = res, aes(x = x, fill = fill)) + geom_bar() + 
+  scale_fill_discrete("Compared to\nObserved Value") + 
+  xlab("# Correct Cups Identified") + ylab("# Simulations") + 
+  ggtitle("Results of Tea Test Under Random Chance") + 
+  theme(legend.position = c(1, 1), legend.justification = c(1,1), legend.background = element_rect(fill = "transparent", color = "black"))
+```
+```
+### Evidence
+
+Under random chance, it appears that our tea taster would be expected to identify all of the cups correctly (corresponding to HHHH) 4/100 = 0.04 times. 
+
+::: define
+0.04 in this example corresponds to our **p-value** - the probability under the null hypothesis of observing the results from our experiment.
+:::
+
+0.04 is a fairly low value, so we might say that we don't believe that the results are sufficiently likely under our null hypothesis. In this case, the probability of observing the results under the null hypothesis is low, so we might instead conclude that the alternative hypothesis seems more reasonable -- that is, it is more likely that the null hypothesis is wrong. 
+So, we might instead conclude that because our p-value is so low, that is, that we are unlikely to observe results this extreme under random chance, that instead we believe that the lady is not guessing and can actually detect the difference in tea prepared in different ways. We **reject the null hypothesis and conclude that the alternative is more likely**.
+
+Now, in this example, we have a relatively low sample size -- which means that it is hard for us to find evidence too much stronger than what our simulation provided for us. In many situations in science, however, we may require **stronger evidence** that the null hypothesis is unlikely to generate results that we have observed -- corresponding to requiring a p-value that is lower than 0.05. The correct threshold value ("alpha") for rejecting a null hypothesis differs by discipline (physics may use values like $10^{-6}$) and by the consequences of the results (medical trials may require small p-values, while studies looking for avenues to explore may use higher p-values.)
+
+
+### Connection to Theory-based Tests
+
+The simulation method described above for evaluating the probability of observing the evidence under the null hypothesis relies on significant manual simulation or outsourcing that work to a computer. The results are not guaranteed to be the same every time, and before computers were common, the manual simulation approach was often too tedious to use regularly. Thus, probability distributions describing the results mathematically were used instead. 
+
+The full theoretical distribution for the tea tasting experiment is available [here](https://en.wikipedia.org/wiki/Lady_tasting_tea#The_experiment), but in essence, the researcher uses a theoretical distribution 
