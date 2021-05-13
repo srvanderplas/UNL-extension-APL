@@ -3,8 +3,6 @@ intro-concept-mapping
 genres-sci-text
 experimental-design-and-statistical-analysis
 the-logic-of-statistical-hypothesis-testing
-evidence
-connection-to-theory-based-tests
 apl-specific-methodology
 adapted-primary-literature-apl-concept-mapping-complete-the-consider-phase-of-the-create-method
 apl-methods-design

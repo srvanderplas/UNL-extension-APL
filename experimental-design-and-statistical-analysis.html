@@ -80,8 +80,8 @@
 <li class="chapter" data-level="3.1" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#the-logic-of-statistical-hypothesis-testing"><i class="fa fa-check"></i><b>3.1</b> The Logic of Statistical Hypothesis Testing</a><ul>
 <li class="chapter" data-level="" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#initial-statistical-setup"><i class="fa fa-check"></i>Initial statistical setup</a></li>
 <li class="chapter" data-level="" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#simulation"><i class="fa fa-check"></i>Simulation</a></li>
-<li class="chapter" data-level="3.1.1" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#evidence"><i class="fa fa-check"></i><b>3.1.1</b> Evidence</a></li>
-<li class="chapter" data-level="3.1.2" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#connection-to-theory-based-tests"><i class="fa fa-check"></i><b>3.1.2</b> Connection to Theory-based Tests</a></li>
+<li class="chapter" data-level="" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#strength-of-the-evidence"><i class="fa fa-check"></i>Strength of the Evidence</a></li>
+<li class="chapter" data-level="" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#connection-to-theory-based-tests"><i class="fa fa-check"></i>Connection to Theory-based Tests</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="apl-specific-methodology.html"><a href="apl-specific-methodology.html"><i class="fa fa-check"></i><b>4</b> APL specific methodology</a></li>
@@ -144,8 +144,8 @@ Figure 3.1: Simulated results (left), and simulated results evaluated in light o
 </p>
 </div>
 </div>
-<div id="evidence" class="section level3">
-<h3><span class="header-section-number">3.1.1</span> Evidence</h3>
+<div id="strength-of-the-evidence" class="section level3 unnumbered">
+<h3>Strength of the Evidence</h3>
 <p>Our simulation shows that under random chance, it appears that our tea taster would be expected to identify all of the cups correctly (corresponding to HHHH) 4/100 = 0.04 times.</p>
 <div class="define">
 <p>0.04 in this example corresponds to our <strong>p-value</strong> - the probability under the null hypothesis of observing the results from our experiment.</p>
@@ -154,10 +154,19 @@ Figure 3.1: Simulated results (left), and simulated results evaluated in light o
 So, we might instead conclude that because our p-value is so low, that is, that we are unlikely to observe results this extreme under random chance, that instead we believe that the lady is not guessing and can actually detect the difference in tea prepared in different ways. We <strong>reject the null hypothesis and conclude that the alternative is more likely</strong>.</p>
 <p>Now, in this example, we have a relatively low sample size – which means that it is hard for us to find evidence too much stronger than what our simulation provided for us. In many situations in science, however, we may require <strong>stronger evidence</strong> that the null hypothesis is unlikely to generate results that we have observed – corresponding to requiring a p-value that is lower than 0.05. The correct threshold value (“alpha”) for rejecting a null hypothesis differs by discipline (physics may use values like <span class="math inline">\(10^{-6}\)</span>) and by the consequences of the results (medical trials may require small p-values, while studies looking for avenues to explore may use higher p-values.)</p>
 </div>
-<div id="connection-to-theory-based-tests" class="section level3">
-<h3><span class="header-section-number">3.1.2</span> Connection to Theory-based Tests</h3>
+<div id="connection-to-theory-based-tests" class="section level3 unnumbered">
+<h3>Connection to Theory-based Tests</h3>
 <p>The simulation method described above for evaluating the probability of observing the evidence under the null hypothesis relies on significant manual simulation or outsourcing that work to a computer. The results are not guaranteed to be the same every time, and before computers were common, the manual simulation approach was often too tedious to use regularly. Thus, probability distributions describing the results mathematically were used instead.</p>
-<p>No matter what distribution the researcher uses to compare to, the basic idea of theory-based statistics is the same: we look for evidence that our result is (or is not) likely under the null hypothesis. If the result is likely under the null, then we can’t say anything – we can’t disprove the idea that the results are due to chance. If the result isn’t likely under the null, then we reject the null hypothesis and say the alternative is more likely.</p>
+<div class="figure">
+<img src="image/SimulationTheoryCartoon.svg" alt="" />
+<p class="caption">Simulated distributions approximate the theoretical distribution, but connect more clearly to real-world ideas.</p>
+</div>
+<p>No matter what distribution the researcher uses to compare to, the basic idea of theory-based statistics is the same: we look for <strong>evidence that our result is (or is not) likely under the null hypothesis</strong>. If the result is likely under the null, then we can’t say anything – we can’t disprove the idea thatzzzzzzz the results are due to chance. If the result isn’t likely under the null, then we reject the null hypothesis and say the alternative is more likely.</p>
+<p>In theory-based tests, this evidence is usually in the form of a **__-value** where the blank is the name of the distribution (commonly, <span class="math inline">\(z\)</span>, <span class="math inline">\(t\)</span>, <span class="math inline">\(F\)</span>, <span class="math inline">\(\chi^2\)</span>).</p>
+<div class="figure">
+<img src="image/Stat_test_logic.svg" alt="" />
+<p class="caption">The same process used in simulated distributions works in theory-based distributions.</p>
+</div>
 
 </div>
 </div>
