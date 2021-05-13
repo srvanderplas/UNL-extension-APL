@@ -54,7 +54,7 @@ ggplot(data = res, aes(x = x, fill = fill)) + geom_bar() +
 ```
 
 
-### Evidence
+### Strength of the Evidence {-}
 
 Our simulation shows that under random chance, it appears that our tea taster would be expected to identify all of the cups correctly (corresponding to HHHH) 4/100 = 0.04 times. 
 
@@ -68,8 +68,14 @@ So, we might instead conclude that because our p-value is so low, that is, that 
 Now, in this example, we have a relatively low sample size -- which means that it is hard for us to find evidence too much stronger than what our simulation provided for us. In many situations in science, however, we may require **stronger evidence** that the null hypothesis is unlikely to generate results that we have observed -- corresponding to requiring a p-value that is lower than 0.05. The correct threshold value ("alpha") for rejecting a null hypothesis differs by discipline (physics may use values like $10^{-6}$) and by the consequences of the results (medical trials may require small p-values, while studies looking for avenues to explore may use higher p-values.)
 
 
-### Connection to Theory-based Tests
+### Connection to Theory-based Tests {-}
 
 The simulation method described above for evaluating the probability of observing the evidence under the null hypothesis relies on significant manual simulation or outsourcing that work to a computer. The results are not guaranteed to be the same every time, and before computers were common, the manual simulation approach was often too tedious to use regularly. Thus, probability distributions describing the results mathematically were used instead. 
 
-No matter what distribution the researcher uses to compare to, the basic idea of theory-based statistics is the same: we look for evidence that our result is (or is not) likely under the null hypothesis. If the result is likely under the null, then we can't say anything -- we can't disprove the idea that the results are due to chance. If the result isn't likely under the null, then we reject the null hypothesis and say the alternative is more likely. 
+![Simulated distributions approximate the theoretical distribution, but connect more clearly to real-world ideas.](image/SimulationTheoryCartoon.svg)
+
+No matter what distribution the researcher uses to compare to, the basic idea of theory-based statistics is the same: we look for **evidence that our result is (or is not) likely under the null hypothesis**. If the result is likely under the null, then we can't say anything -- we can't disprove the idea thatzzzzzzz the results are due to chance. If the result isn't likely under the null, then we reject the null hypothesis and say the alternative is more likely. 
+
+In theory-based tests, this evidence is usually in the form of a **__-value** where the blank is the name of the distribution (commonly, $z$, $t$, $F$, $\chi^2$). 
+
+![The same process used in simulated distributions works in theory-based distributions.](image/Stat_test_logic.svg)
