@@ -2,14 +2,16 @@
 
 Note: Modeled after supplementary materials teaching guide, Hoskins et al, 2020: https://doi.org/10.1128/jmbe.v21i1.1905
 
-Time: 50-90 minutes
-
-::: define
-**Working definition for a concept map**: A concept map is a hierarchical-based web of inter-related concepts, which are represented by words and linked to other concepts by short descriptive phrases.
+::: time
+50-90 minutes
 :::
 
 
 Introduce concept mapping to students. Do not spend too much time on the technicalities of concept mapping, but it is important to highlight key aspects of the process. During this time, it is important to communicate to students that the ultimate goal of utilizing a tool like a concept map is to enable students to apply and transfer the underlying knowledge-making principles of concept mapping to augment their ability to critically process both old and new information—long beyond the focus of this unit. 
+
+::: define
+**Working definition for a concept map**: A concept map is a hierarchical-based web of inter-related concepts, which are represented by words and linked to other concepts by short descriptive phrases.
+:::
 
 Pick an easy/familiar topic and begin demonstrating making a concept map using [Cmap-Cloud](https://cmap.ihmc.us/), an electronic, cloud-based concept-mapping tool that allows creation and synchronous editing of concept maps my multiple people at once, making it a good tool for in-class or outside-class group-work. It is recommended to utilize the framework outlined from http://www1.udel.edu/chem/white/teaching/ConceptMap.html to i) organize, ii) layout, iii) link, and iv) finalize the concept map.  The main-focus here is to communicate the basic structure that defines a good concept map (i.e., usually, this includes a well-defined hierarchy of concepts that contain a rich connection of links between them).  
 

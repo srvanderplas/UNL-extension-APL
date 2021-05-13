@@ -1,6 +1,8 @@
 #  APL specific methodology
 
-Time: 30-50 minutes for implementing the methods-based lightning talk, which includes a case study word problem for students
+::: time
+30-50 minutes for implementing the methods-based lightning talk, which includes a case study word problem for students
+:::
 
 During this lesson, you will provide a methods-based lightening talk (slides received at the workshop, which APL-specific methods) that includes a background in APL-specific methodology, that collectively, will provide students with the necessary tools to i) interpret APL results, ii) design experiments using methods described in the APL.  
 

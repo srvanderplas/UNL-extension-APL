@@ -1,6 +1,8 @@
 # Genres of Scientific Text {#genres-sci-text}
 
-Time: 50-90 minutes
+::: time
+50-90 minutes
+:::
 
 Have students share the concept maps they made during Lesson 1. It is recommended that each group present and discuss their concept map with the rest of the class (2-5 minutes). Suggested discussion points include: 
 

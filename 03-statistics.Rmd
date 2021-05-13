@@ -1,6 +1,8 @@
 # Experimental Design and Statistical Analysis
 
-Time: 200 minutes
+::: time
+200 minutes
+:::
 
 Next, provide an overview focusing on a discussion of the basic principles underlying controlled versus observational studies, and how their underlying study design differences ultimately determine the nature of experimental conclusions that they can claim (i.e., causal versus association or correlational-based conclusions).  This is a good time to connect back to the different types of scientific studies that were discussed by students during the scientific literature exercise the previous day.  For example, a possible jab to stimulate discussion “why is it the case that in study A (a highly controlled study) versus study B (an observational study) that the scientists talk about causation, whereas in study B only correlational or association based claims are made—because both findings are statistically significant”? This is a lead-in to describing the nature of a controlled study, as well as how one thinks about experimental design in this context. It is recommended that you customize the problem based learning activity from handout X to cover important concepts and terminology related to these topics. This handout features PBL activities, that utilize a variety of case study examples from many different fields—field work, animal work, human work, bench work, environmental work, ect—to practice identifying different levels of controlled based experimental design, as well as the key aspects that define them.  After the exercise, for homework, have students return to their master concept map, and add on an additional concept that covers experimental design components they identified and conceptualized in the activity.  
 

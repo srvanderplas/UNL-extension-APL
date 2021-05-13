@@ -3,9 +3,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">A Minimal Book Example</a></li>
-      after: |
-        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+        <li><span style="display:block; height:70px;"><img src="image/N.svg" height="50px" style="float:left;clear:left;padding-right:10px"><h1>Extension</h1></span></li>
     download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:
