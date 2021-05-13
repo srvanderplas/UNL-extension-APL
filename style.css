@@ -14,15 +14,17 @@ pre code {
 }
 
 
-.activity, .box, .define, .emphasize, .note, .quiz {
+.activity, .box, .define, .emphasize, .note, .quiz, .time {
   background-origin:padding-box;
   background-repeat: no-repeat;
-  background-size:10% auto;
-  padding:5px 5px 5px 11%;
+  background-size:5% auto;
+  background-position: left center;
+  padding:5px 5px 5px 6%;
   min-width:99%;
   min-height:4em;
   /*margin: 20px 20px;*/
   box-shadow: 10px white;
+  vertical-align:middle;
 }
 
 .emphasize {
@@ -32,6 +34,11 @@ pre code {
               0 0 0 10px white;
 }
 
+.time {
+  background-image:url(image/clock-regular.svg);
+  box-shadow: 0 0 0 1px #FFD166,
+              0 0 0 10px white;
+}
 .note {
   background-image:url(image/sticky-note-regular.svg);
   box-shadow: 0 0 0 1px #FFD166,
