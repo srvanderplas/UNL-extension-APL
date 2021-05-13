@@ -37,7 +37,7 @@ If the results we observed are due to random chance alone, how common would it b
 3. Repeat 100 times to generate a distribution of results under the null hypothesis -- that is, what our results would look like if the lady is just guessing.    
 Note: in a classroom setting, you can have each person generate several data points using actual coin flips to get this distribution.
 
-```{r, echo = F}
+```{r, echo = F, out.width = "49.5%", fig.show = "hold", fig.cap = "Simulated results (left), and simulated results evaluated in light of our observed data.", fig.width = 5, fig.height = 4}
 set.seed(24094703)
 library(ggplot2)
 library(tibble)
@@ -52,10 +52,11 @@ ggplot(data = res, aes(x = x, fill = fill)) + geom_bar() +
   ggtitle("Results of Tea Test Under Random Chance") + 
   theme(legend.position = c(1, 1), legend.justification = c(1,1), legend.background = element_rect(fill = "transparent", color = "black"))
 ```
-```
+
+
 ### Evidence
 
-Under random chance, it appears that our tea taster would be expected to identify all of the cups correctly (corresponding to HHHH) 4/100 = 0.04 times. 
+Our simulation shows that under random chance, it appears that our tea taster would be expected to identify all of the cups correctly (corresponding to HHHH) 4/100 = 0.04 times. 
 
 ::: define
 0.04 in this example corresponds to our **p-value** - the probability under the null hypothesis of observing the results from our experiment.
@@ -71,4 +72,4 @@ Now, in this example, we have a relatively low sample size -- which means that i
 
 The simulation method described above for evaluating the probability of observing the evidence under the null hypothesis relies on significant manual simulation or outsourcing that work to a computer. The results are not guaranteed to be the same every time, and before computers were common, the manual simulation approach was often too tedious to use regularly. Thus, probability distributions describing the results mathematically were used instead. 
 
-The full theoretical distribution for the tea tasting experiment is available [here](https://en.wikipedia.org/wiki/Lady_tasting_tea#The_experiment), but in essence, the researcher uses a theoretical distribution 
+No matter what distribution the researcher uses to compare to, the basic idea of theory-based statistics is the same: we look for evidence that our result is (or is not) likely under the null hypothesis. If the result is likely under the null, then we can't say anything -- we can't disprove the idea that the results are due to chance. If the result isn't likely under the null, then we reject the null hypothesis and say the alternative is more likely. 
