@@ -24,7 +24,7 @@
 <meta name="author" content="Paul Velander" />
 
 
-<meta name="date" content="2021-05-13" />
+<meta name="date" content="2021-06-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -82,7 +82,10 @@
 <li class="chapter" data-level="" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#simulation"><i class="fa fa-check"></i>Simulation</a></li>
 <li class="chapter" data-level="" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#strength-of-the-evidence"><i class="fa fa-check"></i>Strength of the Evidence</a></li>
 <li class="chapter" data-level="" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#connection-to-theory-based-tests"><i class="fa fa-check"></i>Connection to Theory-based Tests</a></li>
+<li class="chapter" data-level="" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#understanding-p-values"><i class="fa fa-check"></i>Understanding p-values</a></li>
 </ul></li>
+<li class="chapter" data-level="3.2" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#estimating-values-confidence-intervals"><i class="fa fa-check"></i><b>3.2</b> Estimating Values: Confidence Intervals</a></li>
+<li class="chapter" data-level="3.3" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#experimental-design"><i class="fa fa-check"></i><b>3.3</b> Experimental Design</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="apl-specific-methodology.html"><a href="apl-specific-methodology.html"><i class="fa fa-check"></i><b>4</b> APL specific methodology</a></li>
 <li class="chapter" data-level="5" data-path="adapted-primary-literature-apl-concept-mapping-complete-the-consider-phase-of-the-create-method.html"><a href="adapted-primary-literature-apl-concept-mapping-complete-the-consider-phase-of-the-create-method.html"><i class="fa fa-check"></i><b>5</b> Adapted Primary Literature (APL) Concept-mapping: Complete the Consider phase of the CREATE method</a></li>
@@ -167,8 +170,34 @@ So, we might instead conclude that because our p-value is so low, that is, that 
 <img src="image/Stat_test_logic.png" alt="" />
 <p class="caption">The same process used in simulated distributions works in theory-based distributions.</p>
 </div>
-
 </div>
+<div id="understanding-p-values" class="section level3 unnumbered">
+<h3>Understanding p-values</h3>
+<p>The p-value is the probability of observing the data we saw under the null hypothesis <span class="math inline">\(H_0\)</span>. A p-value is the <strong>area under the reference distribution</strong> where values are <strong>as or more extreme</strong> than the hypothesized value.</p>
+<p><img src="image/p-value-logic.png" /></p>
+<p>If the p-value is low (<span class="math inline">\(p &lt; \alpha\)</span>, where <span class="math inline">\(\alpha = 0.05, 0.01\)</span>, or another pre-specified value) then we know that it is relatively unlikely to observe our data under <span class="math inline">\(H_0\)</span>… which means that it is more likely that <span class="math inline">\(H_0\)</span> is false and <span class="math inline">\(H_A\)</span> is true.</p>
+<p>When p-values are low, we <strong>reject <span class="math inline">\(H_0\)</span> and conclude that <span class="math inline">\(H_A\)</span> is more likely</strong>.</p>
+<p><img src="image/two-sided-test.png" />
+Not all alternative hypotheses are one sided, e.g. <span class="math inline">\(x &gt; a\)</span>. Some hypotheses are two sided - <span class="math inline">\(H_0: x = a\)</span> and <span class="math inline">\(H_A: x \neq a\)</span>. When we have a two-sided hypothesis, we have two areas of our distribution that contribute to the p-value.</p>
+</div>
+</div>
+<div id="estimating-values-confidence-intervals" class="section level2">
+<h2><span class="header-section-number">3.2</span> Estimating Values: Confidence Intervals</h2>
+<p>Sometimes, we don’t want to test whether a parameter is equal to a specific value - instead, we might want to know what that value is (or at least, a range of possible values for that parameter).</p>
+<p>In this case, we construct a <strong>confidence interval</strong> - a set of plausible values for the parameter.</p>
+<p>We can think of a confidence interval as our best estimate of the parameter value + uncertainty.</p>
+<div class="figure">
+<img src="image/confidence-interval-best-est-uncertainty.png" alt="" />
+<p class="caption">Confidence intervals are a range of values around the central estimate obtained from the sample data</p>
+</div>
+<p>Confidence intervals, like hypothesis tests, are conducted based on a parameter <span class="math inline">\(\alpha\)</span> representing the acceptable level of error. If we want to be 95% confident in our estimate, our interval will be <strong>wider</strong> than if we want to be 90% confident in our estimate – we have to include more values to get a wider interval.</p>
+</div>
+<div id="experimental-design" class="section level2">
+<h2><span class="header-section-number">3.3</span> Experimental Design</h2>
+<!-- Paired vs unpaired tests -->
+<!-- Multiple variables (ANOVA) -->
+<!-- Regression Intro -->
+
 </div>
 </div>
 <div class="footnotes">
