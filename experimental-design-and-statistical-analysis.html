@@ -24,7 +24,7 @@
 <meta name="author" content="Paul Velander" />
 
 
-<meta name="date" content="2021-07-09" />
+<meta name="date" content="2021-07-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -94,7 +94,9 @@
 <li class="chapter" data-level="" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#understanding-p-values"><i class="fa fa-check"></i>Understanding p-values</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#estimating-values-confidence-intervals"><i class="fa fa-check"></i><b>3.2</b> Estimating Values: Confidence Intervals</a></li>
-<li class="chapter" data-level="3.3" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#experimental-design"><i class="fa fa-check"></i><b>3.3</b> Experimental Design</a></li>
+<li class="chapter" data-level="3.3" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#experimental-design"><i class="fa fa-check"></i><b>3.3</b> Experimental Design</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#two-sample-tests"><i class="fa fa-check"></i><b>3.3.1</b> Two Sample Tests</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="apl-specific-methodology.html"><a href="apl-specific-methodology.html"><i class="fa fa-check"></i><b>4</b> APL specific methodology</a></li>
 <li class="chapter" data-level="5" data-path="adapted-primary-literature-apl-concept-mapping-complete-the-consider-phase-of-the-create-method.html"><a href="adapted-primary-literature-apl-concept-mapping-complete-the-consider-phase-of-the-create-method.html"><i class="fa fa-check"></i><b>5</b> Adapted Primary Literature (APL) Concept-mapping: Complete the Consider phase of the CREATE method</a></li>
@@ -203,10 +205,29 @@ Not all alternative hypotheses are one sided, e.g. <span class="math inline">\(
 </div>
 <div id="experimental-design" class="section level2">
 <h2><span class="header-section-number">3.3</span> Experimental Design</h2>
-<!-- Paired vs unpaired tests -->
+<p>Many studies have a design which is more complicated than the simple examples shown in the previous section. However, all of these designs use the same statistical principles - they may just be applied in different ways.</p>
+<p>What follows is a brief description and depiction of how these different experimental designs work in practice. Focus primarily on the way the experiments are set up – in the end, there is always a test statistic computed from the sample mean(s) and variance(s) which is compared to a distribution, as described above.</p>
+<!-- Two sample test example -->
+<div id="two-sample-tests" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Two Sample Tests</h3>
+<p>In a two-sample test, there are two groups of participants which are assigned different treatments. The goal is to see how the two treatments differ. Because there are two groups, the mathematical formula for calculating the standardized statistic is slightly more complicated, but in the end that statistic is compared to a similar reference distribution.</p>
+<p><img src="image/unpaired-test.png" alt="A two-sample test randomly divides up a sample into two groups and calculates the sample mean for each group." />
+<!-- Paired vs unpaired tests --></p>
+<p>In a variation on this theme, in some cases, we may want to compare two treatments, but we may design the experiment to reduce variability using either repeated measures or matched pairs.</p>
+<p>A repeated measures study requires each participant to experience both treatments under comparison.</p>
+<div class="figure">
+<img src="image/repeated-measures.png" alt="" />
+<p class="caption">In a repeated measures study, the same individuals see both treatment A and treatment B; this way, each individual serves as their own control</p>
+</div>
+<p>Sometimes, it is not ethical or feasible to give the same individual both treatments – for instance, we cannot ethically or logistically assign mothers to breastfeed or formula feed with the same baby – and so instead, we must create pairs of individuals who are similar.</p>
+<div class="figure">
+<img src="image/matched-pairs.png" alt="" />
+<p class="caption">In a matched pairs study, we use covariates to match individuals and then assign each individual in a pair to a single treatment. Matched pairs studies reduce variability, but not as much as repeated measures studies</p>
+</div>
 <!-- Multiple variables (ANOVA) -->
 <!-- Regression Intro -->
 
+</div>
 </div>
 </div>
 <div class="footnotes">
