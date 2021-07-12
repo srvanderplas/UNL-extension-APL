@@ -6,6 +6,7 @@ the-logic-of-statistical-hypothesis-testing
 estimating-values-confidence-intervals
 experimental-design
 two-sample-tests
+matched-pairs-and-repeated-measures
 apl-specific-methodology
 adapted-primary-literature-apl-concept-mapping-complete-the-consider-phase-of-the-create-method
 apl-methods-design
