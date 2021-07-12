@@ -16,7 +16,7 @@
    id="svg8"
    sodipodi:docname="unpaired-test.svg"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
-   inkscape:export-filename="/home/susan/Projects/Work/2021-Extension-APL/image/unpaired-test.svg.png"
+   inkscape:export-filename="/home/susan/Projects/Work/2021-Extension-APL/image/unpaired-test.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <defs
@@ -1804,7 +1804,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
