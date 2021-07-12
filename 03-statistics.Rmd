@@ -108,7 +108,32 @@ Confidence intervals, like hypothesis tests, are conducted based on a parameter 
 
 ## Experimental Design
 
+Many studies have a design which is more complicated than the simple examples shown in the previous section. However, all of these designs use the same statistical principles - they may just be applied in different ways.
+
+What follows is a brief description and depiction of how these different experimental designs work in practice. Focus primarily on the way the experiments are set up -- in the end, there is always a test statistic computed from the sample mean(s) and variance(s) which is compared to a distribution, as described above.
+
+<!-- Two sample test example -->
+### Two Sample Tests
+
+In a two-sample test, there are two groups of participants which are assigned different treatments. The goal is to see how the two treatments differ. Because there are two groups, the mathematical formula for calculating the standardized statistic is slightly more complicated, but in the end that statistic is compared to a similar reference distribution.
+
+![A two-sample test randomly divides up a sample into two groups and calculates the sample mean for each group.](image/unpaired-test.png)
 <!-- Paired vs unpaired tests -->
+
+### Matched Pairs and Repeated Measures
+
+In a variation on this theme, in some cases, we may want to compare two treatments, but we may design the experiment to reduce variability using either repeated measures or matched pairs. 
+
+A repeated measures study requires each participant to experience both treatments under comparison. 
+
+![In a repeated measures study, the same individuals see both treatment A and treatment B; this way, each individual serves as their own control](image/repeated-measures.png)
+
+
+Sometimes, it is not ethical or feasible to give the same individual both treatments -- for instance, we cannot ethically or logistically assign mothers to breastfeed or formula feed with the same baby -- and so instead, we must create pairs of individuals who are similar.
+
+![In a matched pairs study, we use covariates to match individuals and then assign each individual in a pair to a single treatment. Matched pairs studies reduce variability, but not as much as repeated measures studies](image/matched-pairs.png)
+
+
 
 <!-- Multiple variables (ANOVA) -->
 
