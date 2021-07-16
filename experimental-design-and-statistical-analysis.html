@@ -24,7 +24,7 @@
 <meta name="author" content="Paul Velander" />
 
 
-<meta name="date" content="2021-07-12" />
+<meta name="date" content="2021-07-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -97,6 +97,7 @@
 <li class="chapter" data-level="3.3" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#experimental-design"><i class="fa fa-check"></i><b>3.3</b> Experimental Design</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#two-sample-tests"><i class="fa fa-check"></i><b>3.3.1</b> Two Sample Tests</a></li>
 <li class="chapter" data-level="3.3.2" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#matched-pairs-and-repeated-measures"><i class="fa fa-check"></i><b>3.3.2</b> Matched Pairs and Repeated Measures</a></li>
+<li class="chapter" data-level="3.3.3" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#analysis-of-variance"><i class="fa fa-check"></i><b>3.3.3</b> Analysis of Variance</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="apl-specific-methodology.html"><a href="apl-specific-methodology.html"><i class="fa fa-check"></i><b>4</b> APL specific methodology</a></li>
@@ -211,14 +212,14 @@ Not all alternative hypotheses are one sided, e.g. <span class="math inline">\(
 <!-- Two sample test example -->
 <div id="two-sample-tests" class="section level3">
 <h3><span class="header-section-number">3.3.1</span> Two Sample Tests</h3>
-<p>In a two-sample test, there are two groups of participants which are assigned different treatments. The goal is to see how the two treatments differ. Because there are two groups, the mathematical formula for calculating the standardized statistic is slightly more complicated, but in the end that statistic is compared to a similar reference distribution.</p>
+<p>In a two-sample test, there are two groups of participants which are assigned different treatments. The goal is to see how the two treatments differ. Because there are two groups, the mathematical formula for calculating the standardized statistic is slightly more complicated (because the variability of <span class="math inline">\(\overline{X}_A - \overline{X}_B\)</span> is a bit more complicated), but in the end that statistic is compared to a similar reference distribution.</p>
 <p><img src="image/unpaired-test.png" alt="A two-sample test randomly divides up a sample into two groups and calculates the sample mean for each group." />
 <!-- Paired vs unpaired tests --></p>
 </div>
 <div id="matched-pairs-and-repeated-measures" class="section level3">
 <h3><span class="header-section-number">3.3.2</span> Matched Pairs and Repeated Measures</h3>
 <p>In a variation on this theme, in some cases, we may want to compare two treatments, but we may design the experiment to reduce variability using either repeated measures or matched pairs.</p>
-<p>A repeated measures study requires each participant to experience both treatments under comparison.</p>
+<p>A repeated measures study requires each participant to experience both treatments in the experiment.</p>
 <div class="figure">
 <img src="image/repeated-measures.png" alt="" />
 <p class="caption">In a repeated measures study, the same individuals see both treatment A and treatment B; this way, each individual serves as their own control</p>
@@ -228,7 +229,78 @@ Not all alternative hypotheses are one sided, e.g. <span class="math inline">\(
 <img src="image/matched-pairs.png" alt="" />
 <p class="caption">In a matched pairs study, we use covariates to match individuals and then assign each individual in a pair to a single treatment. Matched pairs studies reduce variability, but not as much as repeated measures studies</p>
 </div>
+</div>
+<div id="analysis-of-variance" class="section level3">
+<h3><span class="header-section-number">3.3.3</span> Analysis of Variance</h3>
 <!-- Multiple variables (ANOVA) -->
+<p>In other cases, we may be more interested in sources of variability in the data.</p>
+<div class="figure">
+<img src="image/anova-class.png" alt="" />
+<p class="caption">Suppose we have a group of elementary school children, separated by grade. We want to know if grade is a good predictor of the children’s height.</p>
+</div>
+<p>If a variable is important, then it should account for more variability in the data than the overall variability between two observations. In this example, that means that children within a grade should be more similar than children who are from different grades.</p>
+<div class="figure">
+<img src="image/anova-class-means.png" alt="" />
+<p class="caption">To get this information, for each group we calculate the group mean</p>
+</div>
+<div class="figure">
+<img src="image/anova-class-deviations.png" alt="" />
+<p class="caption">Then, for each individual, we calculate the deviation from the group mean</p>
+</div>
+<p>ANOVA models are sometimes shown in tables like this:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Factor</th>
+<th align="right">Df</th>
+<th align="right">Sum Sq</th>
+<th align="right">Mean Sq</th>
+<th align="right">F value</th>
+<th align="right">Pr(&gt;F)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">grade</td>
+<td align="right">2</td>
+<td align="right">112</td>
+<td align="right">56.000000</td>
+<td align="right">26.25</td>
+<td align="right">1.26e-05</td>
+</tr>
+<tr class="even">
+<td align="left">Residuals</td>
+<td align="right">15</td>
+<td align="right">32</td>
+<td align="right">2.133333</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="right">17</td>
+<td align="right">144</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<p>The overall statistic we calculate is the ratio of the sum-of-squares within groups to the sum-of-squares between groups. The mathematical details of this aren’t that important here, unless they make the process easier to understand.</p>
+<p>Between group SS:
+<span class="math inline">\(6 * (43.77 - 41)^2 + 6* (43 - 43.77)^2 + 6 * (47 - 43.77)^2 = 42.77 + 2.69 + 66.53 = 112\)</span></p>
+<p>Within group SS:
+<span class="math display">\[\left(0^2 + 3^2 + (-1)^2 + 0^2 + (-1)^2 + (-1)^2\right) + \\
+\left((-1)^2 + (-1)^2 + 2^2 + (-2)^2 + 1^2 + 1^2\right) + \\
+\left(0^2 + 0^2 + 0^2 + 0^2 + (-2)^2 + 2^2\right) = 32\]</span></p>
+<p>So by adding the group variable, we reduce our total error from 144 (112 + 32) to 32. Not bad! Put another way, our group variable explains some 77% of the overall variability in the data.</p>
+<p>ANOVA models calculate out an F-statistic which is compared to an F-distribution. This F-statistic is calculated as the ratio of the Mean Sq. for each group - the sum of squared errors for each group (between, within) divided by the degrees of freedom (the number of observations - 1). In this case, our F value (with 2, 15 degrees of freedom) is 26.25. This corresponds to a p-value of 0.00001262 – so the chances of observing something this significant when there is in fact no difference between groups is <em>very</em> low.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="APL-guide_files/figure-html/unnamed-chunk-4-1.png" alt="It is clear that 26.25 is very much in the tails of the F(2, 15) distribution, which explains the extremely low p-value." width="50%" />
+<p class="caption">
+Figure 3.2: It is clear that 26.25 is very much in the tails of the F(2, 15) distribution, which explains the extremely low p-value.
+</p>
+</div>
 <!-- Regression Intro -->
 
 </div>
