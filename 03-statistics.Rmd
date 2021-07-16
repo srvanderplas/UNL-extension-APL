@@ -115,7 +115,7 @@ What follows is a brief description and depiction of how these different experim
 <!-- Two sample test example -->
 ### Two Sample Tests
 
-In a two-sample test, there are two groups of participants which are assigned different treatments. The goal is to see how the two treatments differ. Because there are two groups, the mathematical formula for calculating the standardized statistic is slightly more complicated, but in the end that statistic is compared to a similar reference distribution.
+In a two-sample test, there are two groups of participants which are assigned different treatments. The goal is to see how the two treatments differ. Because there are two groups, the mathematical formula for calculating the standardized statistic is slightly more complicated (because the variability of $\overline{X}_A - \overline{X}_B$ is a bit more complicated), but in the end that statistic is compared to a similar reference distribution.
 
 ![A two-sample test randomly divides up a sample into two groups and calculates the sample mean for each group.](image/unpaired-test.png)
 <!-- Paired vs unpaired tests -->
@@ -124,7 +124,7 @@ In a two-sample test, there are two groups of participants which are assigned di
 
 In a variation on this theme, in some cases, we may want to compare two treatments, but we may design the experiment to reduce variability using either repeated measures or matched pairs. 
 
-A repeated measures study requires each participant to experience both treatments under comparison. 
+A repeated measures study requires each participant to experience both treatments in the experiment. 
 
 ![In a repeated measures study, the same individuals see both treatment A and treatment B; this way, each individual serves as their own control](image/repeated-measures.png)
 
@@ -133,8 +133,65 @@ Sometimes, it is not ethical or feasible to give the same individual both treatm
 
 ![In a matched pairs study, we use covariates to match individuals and then assign each individual in a pair to a single treatment. Matched pairs studies reduce variability, but not as much as repeated measures studies](image/matched-pairs.png)
 
-
+### Analysis of Variance
 
 <!-- Multiple variables (ANOVA) -->
+In other cases, we may be more interested in sources of variability in the data.
+
+![Suppose we have a group of elementary school children, separated by grade. We want to know if grade is a good predictor of the children's height.](image/anova-class.png)
+
+If a variable is important, then it should account for more variability in the data than the overall variability between two observations. In this example, that means that children within a grade should be more similar than children who are from different grades.
+
+![To get this information, for each group we calculate the group mean](image/anova-class-means.png)
+
+![Then, for each individual, we calculate the deviation from the group mean](image/anova-class-deviations.png)
+
+
+ANOVA models are sometimes shown in tables like this:
+
+```{r, include = F}
+library(tidyverse)
+
+data <- tibble(group = rep(1:3, each = 6), 
+       groupavg = rep(c(41, 43, 47), each = 6),
+       dev = c(0, 3, -1, 0, -1, -1, -1, -1, 2, -2, 1, 1, 0, 0, 0, 0, -2, 2))
+
+data <- mutate(data, height = groupavg + dev, grade = factor(group))
+
+anova(lm(height ~ grade, data = data))
+```
+```{r, echo = F}
+options(knitr.kable.NA = '') 
+as_tibble(anova(lm(height ~ grade, data = data))) %>%
+  mutate(Factor = c("grade", "Residuals")) %>%
+  select(Factor, everything()) %>%
+  bind_rows(tibble(Factor = "Total", Df = 17, `Sum Sq` = 144, `Mean Sq` = NA, `F value` = NA, `Pr(>F)` = NA)) %>%
+  knitr::kable()
+```
+
+
+The overall statistic we calculate is the ratio of the sum-of-squares within groups to the sum-of-squares between groups. The mathematical details of this aren't that important here, unless they make the process easier to understand.
+
+
+Between group SS: 
+$6 * (43.77 - 41)^2 + 6* (43 - 43.77)^2 + 6 * (47 - 43.77)^2 = 42.77 + 2.69 + 66.53 = 112$
+
+Within group SS:
+$$\left(0^2 + 3^2 + (-1)^2 + 0^2 + (-1)^2 + (-1)^2\right) + \\
+\left((-1)^2 + (-1)^2 + 2^2 + (-2)^2 + 1^2 + 1^2\right) + \\
+\left(0^2 + 0^2 + 0^2 + 0^2 + (-2)^2 + 2^2\right) = 32$$
+
+So by adding the group variable, we reduce our total error from 144 (112 + 32) to 32. Not bad! Put another way, our group variable explains some 77% of the overall variability in the data. 
+
+ANOVA models calculate out an F-statistic which is compared to an F-distribution. This F-statistic is calculated as the ratio of the Mean Sq. for each group - the sum of squared errors for each group (between, within) divided by the degrees of freedom (the number of observations - 1). In this case, our F value (with 2, 15 degrees of freedom) is 26.25. This corresponds to a p-value of 0.00001262 -- so the chances of observing something this significant when there is in fact no difference between groups is *very* low.
+
+```{r, fig.cap = "It is clear that 26.25 is very much in the tails of the F(2, 15) distribution, which explains the extremely low p-value.", echo = F, fig.width = 4, fig.height = 3, out.width = "50%", fig.align = "center"}
+ggplot() + 
+  xlim(c(0, 30)) + 
+  geom_function(fun = df, args = list(df1 = 2, df2 = 15)) + 
+  geom_text(aes(x = 0.25, y = 1, label = "F(2, 15) distribution"), hjust = 0) + 
+  theme(axis.title = element_blank())
+```
+
 
 <!-- Regression Intro -->
