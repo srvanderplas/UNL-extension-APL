@@ -9,6 +9,7 @@ experimental-design
 two-sample-tests
 matched-pairs-and-repeated-measures
 analysis-of-variance
+linear-regression
 apl-specific-methodology
 adapted-primary-literature-apl-concept-mapping-complete-the-consider-phase-of-the-create-method
 apl-methods-design

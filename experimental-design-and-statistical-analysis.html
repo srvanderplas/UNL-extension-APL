@@ -24,7 +24,7 @@
 <meta name="author" content="Paul Velander" />
 
 
-<meta name="date" content="2021-07-20" />
+<meta name="date" content="2021-07-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -98,6 +98,7 @@
 <li class="chapter" data-level="3.3.1" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#two-sample-tests"><i class="fa fa-check"></i><b>3.3.1</b> Two Sample Tests</a></li>
 <li class="chapter" data-level="3.3.2" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#matched-pairs-and-repeated-measures"><i class="fa fa-check"></i><b>3.3.2</b> Matched Pairs and Repeated Measures</a></li>
 <li class="chapter" data-level="3.3.3" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#analysis-of-variance"><i class="fa fa-check"></i><b>3.3.3</b> Analysis of Variance</a></li>
+<li class="chapter" data-level="3.3.4" data-path="experimental-design-and-statistical-analysis.html"><a href="experimental-design-and-statistical-analysis.html#linear-regression"><i class="fa fa-check"></i><b>3.3.4</b> Linear Regression</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="apl-specific-methodology.html"><a href="apl-specific-methodology.html"><i class="fa fa-check"></i><b>4</b> APL specific methodology</a></li>
@@ -301,7 +302,28 @@ Not all alternative hypotheses are one sided, e.g. <span class="math inline">\(
 Figure 3.2: It is clear that 26.25 is very much in the tails of the F(2, 15) distribution, which explains the extremely low p-value.
 </p>
 </div>
+</div>
+<div id="linear-regression" class="section level3">
+<h3><span class="header-section-number">3.3.4</span> Linear Regression</h3>
 <!-- Regression Intro -->
+<div class="figure">
+<img src="image/linear-trend.png" alt="" />
+<p class="caption">Two continuous variables may have a linear relationship</p>
+</div>
+<p>It’s fairly common in science to have two continuous quantitative variables – for instance, height and weight, or fertilizer applied and yield. When we have data like this, we use linear regression to fit a regression line to the data. This line minimizes the errors in <span class="math inline">\(y\)</span>, and is sometimes called the <strong>least squares regression line</strong>.</p>
+<div class="figure">
+<img src="image/linear-regression-1.png" alt="" />
+<p class="caption">We estimate the linear relationship using the least-squares regression line <span class="math inline">\(\hat{y} = a \cdot x + b\)</span>, where <span class="math inline">\(a\)</span> is the slope of the line and <span class="math inline">\(b\)</span> is the y-intercept. <span class="math inline">\(\hat y\)</span> is the predicted value of y at a given value of <span class="math inline">\(x\)</span></p>
+</div>
+<p>Generally, though, our data are not fixed: they are the result of sampling. If this is the case, then we know that a different sample may provide a different result. Thus, we know that any estimates <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> have variability that directly results from <strong>how we collected the data</strong>.</p>
+<div class="figure">
+<img src="image/linear-regression-diff-lines.png" alt="" />
+<p class="caption">If we have a different sample, we may get a different regression line – which means <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> have variability (and a corresponding distribution)</p>
+</div>
+<p>As a result, we generally have a <strong>distribution</strong> of values corresponding to <span class="math inline">\(a\)</span> and a similar <strong>distribution</strong> of values corresponding to <span class="math inline">\(b\)</span>. Because our data are the result of a random sample, we can analyze the least squares regression coefficients using statistical techniques.</p>
+<p>We may want to test hypotheses about <span class="math inline">\(a\)</span> such as “Is there a relationship between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>?” (This doesn’t mention <span class="math inline">\(a\)</span>, but if there is no relationship between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, then <span class="math inline">\(a\)</span> would be 0, so implicitly, we’re asking whether <span class="math inline">\(a = 0\)</span>.) Typically, scientists aren’t as interested in the value of <span class="math inline">\(b\)</span>.</p>
+<p>We can test these hypotheses using simulation by arranging our data as if there is no relationship between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> - that is, by shuffling our <span class="math inline">\(y\)</span> data to correspond to a random <span class="math inline">\(x\)</span> value in the dataset. Then, we would fit a new regression line and record the value of <span class="math inline">\(a^\ast\)</span> (the simulated <span class="math inline">\(a\)</span>).</p>
+<p>Just like before, when we shuffled data or labels, we generate a distribution of <span class="math inline">\(a^\ast\)</span> under the null hypothesis and compare our observed value to that distribution, counting up the number of values which are more extreme.</p>
 
 </div>
 </div>
