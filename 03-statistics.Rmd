@@ -194,4 +194,24 @@ ggplot() +
 ```
 
 
+### Linear Regression
 <!-- Regression Intro -->
+![Two continuous variables may have a linear relationship](image/linear-trend.png)
+
+It's fairly common in science to have two continuous quantitative variables -- for instance, height and weight, or fertilizer applied and yield. When we have data like this, we use linear regression to fit a regression line to the data. This line minimizes the errors in $y$, and is sometimes called the **least squares regression line**.
+
+![We estimate the linear relationship using the least-squares regression line $\hat{y} = a \cdot x + b$, where $a$ is the slope of the line and $b$ is the y-intercept. $\hat y$ is the predicted value of y at a given value of $x$](image/linear-regression-1.png)
+
+
+Generally, though, our data are not fixed: they are the result of sampling. If this is the case, then we know that a different sample may provide a different result. Thus, we know that any estimates $a$ and $b$ have variability that directly results from **how we collected the data**.
+
+![If we have a different sample, we may get a different regression line -- which means $a$ and $b$ have variability (and a corresponding distribution)](image/linear-regression-diff-lines.png)
+
+As a result, we generally have a **distribution** of values corresponding to $a$ and a similar **distribution** of values corresponding to $b$. Because our data are the result of a random sample, we can analyze the least squares regression coefficients using statistical techniques.
+
+We may want to test hypotheses about $a$ such as "Is there a relationship between $x$ and $y$?" (This doesn't mention $a$, but if there is no relationship between $x$ and $y$, then $a$ would be 0, so implicitly, we're asking whether $a = 0$.) Typically, scientists aren't as interested in the value of $b$. 
+
+We can test these hypotheses using simulation by arranging our data as if there is no relationship between $x$ and $y$ - that is, by shuffling our $y$ data to correspond to a random $x$ value in the dataset. Then, we would fit a new regression line and record the value of $a^\ast$ (the simulated $a$). 
+
+Just like before, when we shuffled data or labels, we generate a distribution of $a^\ast$ under the null hypothesis and compare our observed value to that distribution, counting up the number of values which are more extreme.
+
