@@ -112,6 +112,22 @@ Many studies have a design which is more complicated than the simple examples sh
 
 What follows is a brief description and depiction of how these different experimental designs work in practice. Focus primarily on the way the experiments are set up -- in the end, there is always a test statistic computed from the sample mean(s) and variance(s) which is compared to a distribution, as described above.
 
+### One Sample Tests
+
+#### Categorical Variables
+
+In one-sample tests of categorical variables, we typically want to know whether the proportion of successes (the quantity we're interested in) is equal to a specific value (that is, $\pi = 0.5$ or something of that sort). Our population parameter, $\pi$, represents the unknown population quantity, and our sample statistic, $\hat p$, represents what we know about the value of $\pi$. 
+
+In these tests, our **null hypothesis** is that $\pi = a$, where a is chosen relative to the problem. Often, $a$ is equal to 0.5, because usually that corresponds to random chance.
+
+When simulating these experiments, we will often use a coin flip (for random chance) or a spinner (for other values of $\pi$) to generate data.
+
+
+#### Continuous Variables
+
+One-sample continuous variable experiments cannot be simulated because we do not usually know the characteristics of the population we're trying to predict from. Instead, we use theory-based tests for continuous one-sample data.
+
+
 <!-- Two sample test example -->
 ### Two Sample Tests
 
