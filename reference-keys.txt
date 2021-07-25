@@ -6,6 +6,9 @@ experimental-design-and-statistical-analysis
 the-logic-of-statistical-hypothesis-testing
 estimating-values-confidence-intervals
 experimental-design
+one-sample-tests
+categorical-variables
+continuous-variables
 two-sample-tests
 matched-pairs-and-repeated-measures
 analysis-of-variance
